@@ -1,0 +1,13 @@
+.center-text{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    background-color: rgb(101, 101, 172);
+    margin: auto;
+  
+  }
+
+  .container {background-color: rgb(228, 198, 198);}
+
+.hidden {}
+

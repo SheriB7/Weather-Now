@@ -4,9 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
 </head>
+<nav class="navbar p3">    
+    <h1 class="center-text">Weather Dashboard</h1></nav>
 <body>
+    <div class="container">
+
+    <div class="card w-50">
+        <div class="card-body">
+            <h2 class="card-title">Search by City</h2>
+            <item id="search-item" class="card-body">
+                <input name="city-name" id="city-name" type="text" class="item-input my-2">
+            </item>
+            
+            <a href="#" class="btn btn-primary">Search</a>
+        </div>
+    </div>  
+
+    
+    <!-- get live weather data -->
+    
+            <div class="col-12 col-md-8 col-lg-9">                               
+                <div class="card-body" id="current-weather">
+                    <p class="card-list">
+                        <p>Current Weather</p>                        
+                    <ul id="weather"></ul>
+                </div>
+            </div>   
+
+        <section class="row-justify-around"></section>
+        <div class="card" style="width: 18rem;">
+
+        </div>
+
+            <!-- 5 day -->
+
+        <section class="row"> 
+        <div class="card-deck">
+            <div class="card" id="fiveDay"> 
+                <div class="card-body">
+                    <h5 class="card-title">
+                    Day 1
+                    </h5>
+                    <div class="d-inline-flex flex-wrap p-2" id="daily-forecast">
+                        
+                    </div>
+                </div>
+            
+            </div>
+            
+            <!-- <div class="card" id="fiveDay">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Day 2</h5>
+                </div>
+            
+            </div>
+            
+            <div class="card" id="fiveDay">                
+                <div class="card-body">
+                    <h5 class="card-title">Day 3</h5>
+                </div>           
+            </div>
+
+            <div class="card" id="fiveDay">
+                
+            <div class="card-body">
+                <h5 class="card-title">Day 4</h5>
+                </div>           
+            </div>
+
+            <div class="card" id="fiveDay">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Day 5</h5>
+                </div>           
+            </div> -->
+
+
+
+        </div>
+    </section>    
+        
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
+    <script src="./assets/app.js"></script>
+
+
+                <!-- <main class="container"> 
+                        <section class="row"> 
+                            <div class="col-12 col-lg-2 mb-3">
+                                <div class="card">
+                                    <h3 class="card-header">weather</h3>
+                                    <div class="card-body">
+                                        <p class="card-list">
+                                            <li>Temp</li>
+                                            <li>Wind</li>
+                                            <li>Humidity</li>
+                                            <li>UV Index</li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </main-->
+
+
+
+
+
     
 </body>
-</html>
+</html> 
