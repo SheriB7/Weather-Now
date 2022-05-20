@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,55 +10,58 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
 </head>
-<nav class="navbar p3">    
-    <h1 class="center-text">Weather Dashboard</h1></nav>
+
 <body>
+    <nav class="navbar p3">
+        <h1 class="center-text">Weather Dashboard</h1>
+    </nav>
     <div class="container">
+        <div class="d-flex row-justify-around w-100">
+            <div class="card info-box">
+                <div class="card-body">
+                    <h2 class="card-title">Search by City</h2>
+                    <form id="search-item" class="card-body">
+                        <input name="city-name" id="city-name" type="text" class="item-input my-2">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
 
-    <div class="card w-50">
-        <div class="card-body">
-            <h2 class="card-title">Search by City</h2>
-            <item id="search-item" class="card-body">
-                <input name="city-name" id="city-name" type="text" class="item-input my-2">
-            </item>
-            
-            <a href="#" class="btn btn-primary">Search</a>
-        </div>
-    </div>  
-
-    
-    <!-- get live weather data -->
-    
-            <div class="col-12 col-md-8 col-lg-9">                               
-                <div class="card-body" id="current-weather">
-                    <p class="card-list">
-                        <p>Current Weather</p>                        
-                    <ul id="weather"></ul>
                 </div>
-            </div>   
+            </div>
+
+            <div id="previous-searches" class="card info-box"></div>
+        </div>
+        <!-- get live weather data -->
+
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="card-body" id="current-weather">
+                <p class="card-list">
+                <p>Current Weather</p>
+                <ul id="weather"></ul>
+            </div>
+        </div>
 
         <section class="row-justify-around"></section>
         <div class="card" style="width: 18rem;">
 
         </div>
 
-            <!-- 5 day -->
+        <!-- 5 day -->
 
-        <section class="row"> 
-        <div class="card-deck">
-            <div class="card" id="fiveDay"> 
-                <div class="card-body">
-                    <h5 class="card-title">
-                    Day 1
-                    </h5>
-                    <div class="d-inline-flex flex-wrap p-2" id="daily-forecast">
-                        
+        <section class="row">
+            <div class="card-deck">
+                <div class="card" id="fiveDay">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Day 1
+                        </h5>
+                        <div class="d-inline-flex flex-wrap p-2" id="daily-forecast">
+
+                        </div>
                     </div>
+
                 </div>
-            
-            </div>
-            
-            <!-- <div class="card" id="fiveDay">
+
+                <!-- <div class="card" id="fiveDay">
                 
                 <div class="card-body">
                     <h5 class="card-title">Day 2</h5>
@@ -87,18 +91,18 @@
 
 
 
-        </div>
-    </section>    
-        
+            </div>
+        </section>
+
     </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    
+
     <script src="./assets/app.js"></script>
 
 
-                <!-- <main class="container"> 
+    <!-- <main class="container"> 
                         <section class="row"> 
                             <div class="col-12 col-lg-2 mb-3">
                                 <div class="card">
@@ -119,6 +123,7 @@
 
 
 
-    
+
 </body>
-</html> 
+
+</html>

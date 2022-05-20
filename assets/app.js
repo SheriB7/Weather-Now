@@ -7,7 +7,7 @@ var previousSearchContainer = document.querySelector("#previous-searches");
 var previousSearches = document.querySelector("#previous-searches");
 var fiveDayHeader = document.querySelector("#five-day");
 var dailyCardContainer = document.querySelector("#daily-forecast");
-var searchValue = document.querySelector("#city-name").textContent;
+var searchValue = document.querySelector("#city-name");
 // localCityArray GV
 var localCityArray = [];
 
@@ -85,7 +85,7 @@ var callOpenWeather = (city) => {
             currentWeather.appendChild(errorText);
             dailyCardContainer.innerHTML = "";
             
-            fiveDayHeader.classList.add("hidden");
+            // fiveDayHeader.classList.add("hidden");
         } else {
                 response.json()
                 .then(function (data) {
@@ -180,16 +180,16 @@ var callOpenWeather = (city) => {
 searchItem.addEventListener("submit", (event) => {
     event.preventDefault();
     
-    
+    console.log(searchValue.value)
     if (searchValue === "") {
         currentWeather.textContent = "Please enter a city!";
         currentWeather.innerHTML = "";
         dailyCardContainer.innerHTML = "";
         // Hides 5-day forecast if API won't be called
-        fiveDayHeader.classList.add("hidden");
+        // fiveDayHeader.classList.add("hidden");
     } else {
         // Calls API to fetch provided value
-        callOpenWeather(searchValue);
+        callOpenWeather(searchValue.value);
         // Clears text in input
         cityNameInput.value = "";
     }
